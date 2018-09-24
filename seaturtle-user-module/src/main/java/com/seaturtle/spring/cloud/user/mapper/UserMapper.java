@@ -9,7 +9,6 @@ import org.apache.ibatis.annotations.*;
 
 /**
  * 用户相关数据操作
- * 
  * author chufei
  * date 2017年4月10日
  */
@@ -22,8 +21,7 @@ public interface UserMapper {
 	 * @param userPo
 	 */
 	@InsertProvider(type = UserSqlProvider.class, method = "insertUser")
-	@Options(useGeneratedKeys = true, keyProperty = "userId")
-	Long register(@Param("userPo") UserPo userPo);
+	Long register(UserPo userPo);
 
 	/**
 	 * 根据用户id登录
@@ -32,7 +30,7 @@ public interface UserMapper {
 	 * @return 返回用户id
 	 */
 	@Select(value = "select `user_id` from `user` where `user_id` = #{userId} and `password` = #{password}")
-	Long loginByUserId(@Param("userId") Long userId, @Param("password") String password);
+	Long loginByUserId(Long userId, String password);
 
 	/**
 	 * 根据手机号登录
@@ -41,7 +39,7 @@ public interface UserMapper {
 	 * @return 返回用户id
 	 */
 	@Select(value = "select `user_id` from `user` where `phone` = #{phone} and `password` = #{password}")
-	Long loginByPhone(@Param("phone") String phone, @Param("password") String password);
+	Long loginByPhone(String phone, String password);
 
 	/**
 	 * 判断昵称是否已存在
@@ -51,7 +49,7 @@ public interface UserMapper {
 	 * @return 返回1表示已存在，null表示不存在
 	 */
 	@Select(value = "select 1 from `user` where `user_id` = #{userId}")
-	Integer getUserCountByUserId(@Param("userId") Long userId);
+	Integer getUserCountByUserId(Long userId);
 
 	/**
 	 * 判断手机号是否已存在
@@ -61,7 +59,7 @@ public interface UserMapper {
 	 * @return 返回1表示已存在，null表示不存在
 	 */
 	@Select(value = "select 1 from `user` where `phone` = #{phone}")
-	Integer getUserCountByPhone(@Param("phone") String phone);
+	Integer getUserCountByPhone(String phone);
 
 	/**
 	 * 根据用户id获取用户信息
@@ -72,7 +70,7 @@ public interface UserMapper {
 	 */
 	@Select(value = "select * from `user` where user_id = #{userId}")
 	@ResultType(value = UserDto.class)
-	UserDto getUserByUserId(@Param("userId") Long userId);
+	UserDto getUserByUserId(Long userId);
 
 	/**
 	 * 获取所有用户信息

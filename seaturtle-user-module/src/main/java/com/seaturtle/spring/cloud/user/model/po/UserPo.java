@@ -2,10 +2,8 @@ package com.seaturtle.spring.cloud.user.model.po;
 
 import lombok.Data;
 
-import java.util.Date;
-
 /**
- * 用户信息模型
+ * 用户持久化对象模型
  * author Theft
  * date 2018/9/22
  */
@@ -42,13 +40,4 @@ public class UserPo {
      */
     private Integer gender;
 
-    /**
-     * 用户注册时间
-     */
-    private Date registerTime;
-
-    /**
-     * 用户最后一次登录时间
-     */
-    private Date lastLoginTime;
 }

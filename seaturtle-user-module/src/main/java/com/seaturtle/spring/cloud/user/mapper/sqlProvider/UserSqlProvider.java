@@ -17,7 +17,7 @@ public class UserSqlProvider {
             sql.VALUES("user_id", "#{userId}");
         }
         if (userPo.getUserName() != null) {
-            sql.VALUES("name", "#{username}");
+            sql.VALUES("name", "#{userName}");
         }
         if (userPo.getPassword() != null) {
             sql.VALUES("password", "#{password}");

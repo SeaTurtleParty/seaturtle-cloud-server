@@ -1,6 +1,5 @@
-package com.seaturtle.spring.cloud.user.model;
+package com.seaturtle.spring.cloud.util.model;
 
-import com.seaturtle.spring.cloud.user.constant.ResultEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,7 +20,7 @@ public class Result<T> {
     private T data = null;
 
     public boolean success() {
-        return this.code == ResultEnum.SUCCESS.getCode();
+        return this.code == 0;
     }
 
     public Result<T> returnSuccess(T data) {
