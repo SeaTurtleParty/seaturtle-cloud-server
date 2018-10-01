@@ -1,11 +1,13 @@
 package com.seaturtle.spring.cloud.util.model;
 
+import com.seaturtle.spring.cloud.util.constant.ResultEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * author Theft
+ * 请求结果包装类
+ * @author Theft
  * date 2018/9/24
  */
 @Data
@@ -13,17 +15,25 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Result<T> {
 
-    private int code = 0;
+    private Integer code;
 
     private String message = "";
 
     private T data = null;
 
     public boolean success() {
-        return this.code == 0;
+        return this.code == ResultEnum.SUCCESS.getCode();
     }
 
     public Result<T> returnSuccess(T data) {
-        return new Result<>(0, "", data);
+    	this.code = ResultEnum.SUCCESS.getCode();
+    	this.data = data;
+        return this;
     }
+
+    public Result<T> returnFail(int code, String message) {
+    	this.code = code;
+    	this.message = message;
+    	return this;
+	}
 }

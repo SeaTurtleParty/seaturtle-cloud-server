@@ -15,7 +15,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 /**
  * 数据库连接配置类
  * 
- * author chufei
+ * @author chufei
  * date 2017年6月12日
  */
 @Configuration

@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 用户模块业务
- * author Theft
+ * @author Theft
  * date 2018/9/23
  */
 public interface UserService {

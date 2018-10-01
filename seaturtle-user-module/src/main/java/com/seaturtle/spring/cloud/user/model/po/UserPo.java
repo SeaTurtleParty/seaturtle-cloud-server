@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * 用户持久化对象模型
- * author Theft
+ * @author Theft
  * date 2018/9/22
  */
 @Data

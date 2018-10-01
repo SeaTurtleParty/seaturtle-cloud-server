@@ -6,8 +6,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * 基于ConcurrentHashMap和双向链表实现的LRU缓存
  *
  * @author chufei 2018年6月27日
- * @param <K>
- * @param <V>
+ * @param <K> 缓存key
+ * @param <V> 缓存value
  */
 public class LruCache<K, V> {
 

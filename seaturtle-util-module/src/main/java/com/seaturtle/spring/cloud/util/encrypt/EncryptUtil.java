@@ -48,7 +48,7 @@ public class EncryptUtil {
 
     /**
      * 加盐字符串加密
-     * @throws Exception
+     * @return {@link String}型加密后内容, 抛出异常返回{@link null}
      */
     public String encodeBySalt() {
         if (Strings.isNullOrEmpty(inputText)) {
@@ -64,8 +64,8 @@ public class EncryptUtil {
 
     /**
      *  字符串加密
-     * @param inputText
-     * @return
+     * @param inputText 加密内容
+     * @return {@link String}型加密后内容, 抛出异常返回{@link null}
      */
     private String encode(String inputText) {
         MessageDigest digest;

@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * 用户信息模型
- * author Theft
+ * @author Theft
  * date 2018/9/22
  */
 @Data

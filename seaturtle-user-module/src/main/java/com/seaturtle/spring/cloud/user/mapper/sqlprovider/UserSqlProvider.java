@@ -1,15 +1,20 @@
-package com.seaturtle.spring.cloud.user.mapper.sqlProvider;
+package com.seaturtle.spring.cloud.user.mapper.sqlprovider;
 
 import com.seaturtle.spring.cloud.user.model.po.UserPo;
 import org.apache.ibatis.jdbc.SQL;
 
 /**
  * 用户表动态sql
- * author Theft
+ * @author Theft
  * date 2018/9/24
  */
 public class UserSqlProvider {
 
+	/**
+	 * 动态插入user表sql
+	 * @param userPo 插入参数
+	 * @return sql语句
+	 */
     public String insertUser(UserPo userPo) {
         SQL sql = new SQL();
         sql.INSERT_INTO("user");
