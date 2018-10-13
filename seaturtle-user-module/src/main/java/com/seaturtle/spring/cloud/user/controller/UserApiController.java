@@ -1,6 +1,6 @@
 package com.seaturtle.spring.cloud.user.controller;
 
-import com.seaturtle.spring.cloud.util.ResultUtil;
+import com.seaturtle.spring.cloud.util.model.ResultUtil;
 import com.seaturtle.spring.cloud.util.model.Result;
 import com.seaturtle.spring.cloud.user.model.dto.UserDto;
 import com.seaturtle.spring.cloud.user.model.po.UserPo;

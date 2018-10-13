@@ -1,4 +1,4 @@
-package com.seaturtle.spring.cloud.util;
+package com.seaturtle.spring.cloud.util.model;
 
 import static com.google.common.base.Predicates.instanceOf;
 import static io.vavr.API.*;
