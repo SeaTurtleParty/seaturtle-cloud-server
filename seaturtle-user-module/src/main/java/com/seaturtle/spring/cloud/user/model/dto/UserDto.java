@@ -1,5 +1,6 @@
 package com.seaturtle.spring.cloud.user.model.dto;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import java.util.Date;
@@ -40,10 +41,12 @@ public class UserDto {
     /**
      * 用户注册时间
      */
+    @JSONField(format = "yyyy-MM-dd hh:mm:ss")
     private Date registerTime;
 
     /**
      * 用户最后一次登录时间
      */
+    @JSONField(format = "yyyy-MM-dd hh:mm:ss")
     private Date lastLoginTime;
 }

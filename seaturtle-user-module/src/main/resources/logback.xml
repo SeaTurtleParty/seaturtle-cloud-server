@@ -68,10 +68,13 @@
         </filter>
     </appender>
 
+    <logger name="REQUEST" additivity="false">
+        <appender-ref ref="REQUEST-LOG" />
+    </logger>
+
     <root level="INFO">
         <appender-ref ref="INFO-LOG" />
         <appender-ref ref="ERROR-LOG" />
-        <appender-ref ref="REQUEST-LOG" />
         <appender-ref ref="STDOUT" />
     </root>
     

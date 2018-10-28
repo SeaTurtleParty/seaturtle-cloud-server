@@ -1,4 +1,4 @@
-package com.seaturtle.spring.cloud.user.config;
+package com.seaturtle.spring.cloud.user.config.datasource;
 
 import javax.sql.DataSource;
 

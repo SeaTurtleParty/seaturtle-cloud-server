@@ -25,7 +25,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
  */
 @Aspect
 @Component
-@Slf4j(topic = "REQUEST-LOG")
+@Slf4j(topic = "REQUEST")
 public class ControllerAspect {
 
 	@Pointcut("execution(* com.seaturtle.spring.cloud.user.controller.*.*(..))")
